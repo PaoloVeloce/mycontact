@@ -7,8 +7,55 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-<%= yield %>
+        <a class="navbar-brand text-uppercase" href="#">
+          My contact
+        </a>
+      </div>
+      <!-- navbar-header -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <div class="nav navbar-right navbar-btn">
+          <a href="form.html" class="btn btn-default">
+            <i class="glyphicon glyphicon-plus"></i>
+            Add contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- content -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">All contact <span class="badge">10</span></a>
+        <a href="#" class="list-group-item">Relatives <span class="badge">4</span></a>
+        <a href="#" class="list-group-item">Schoolmates <span class="badge">3</span></a>
+        <a href="#" class="list-group-item">MFUAmates <span class="badge">3</span></a>
+        <a href="#" class="list-group-item">Coworkers <span class="badge">3</span></a>
+        <a href="#" class="list-group-item">Karma <span class="badge">3</span></a>
+        <a href="#" class="list-group-item">Programmers <span class="badge">3</span></a>
+      </div>
+    </div><!-- /.col-md-3 -->
+
+    <div class="col-md-9">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
