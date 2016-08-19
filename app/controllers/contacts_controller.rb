@@ -17,6 +17,27 @@ class ContactsController < ApplicationController
     end
   end
 
+  def edit
+    @contact = Contact.find(params[:id])
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
+    if @contact.update(contact_params)
+      flash[:success] = "Successfully updated contact!"
+      redirect_to contacts_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @contact = Contact.find(params[:id])
+    @contact.destroy
+    flash[:success] = "Successfully deleted contact"
+    redirect_to contacts_path
+  end
+
   private
 
   def contact_params
