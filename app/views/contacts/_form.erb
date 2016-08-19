@@ -1,0 +1,151 @@
+<%= form_for @contact do |f| %>
+<div class="panel-body">
+  <div class="form-horizontal">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <%= f.label :name, class: "control-label col-md-3" %>
+          <!-- <label for="name" class="control-label col-md-3">Name</label> -->
+          <div class="col-md-8">
+            <%= f.text_field :name, class: "form-control" %>
+            <!-- <input type="text" name="name" id="name" class="form-control>" -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :company, class: "control-label col-md-3" %>
+          <!-- <label for="company" class="control-label col-md-3">Company</label> -->
+          <div class="col-md-8">
+            <%= f.text_field :company, class: "form-control" %>
+            <!-- <input type="text" name="company" id="company" class="form-control"> -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email, class: "control-label col-md-3" %>
+          <div class="col-md-8">
+            <%= f.text_field :email, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :contactphone, class: "control-label col-md-3" %>
+          <div class="col-md-8">
+            <%= f.text_field :contactphone, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :workphone, class: "control-label col-md-3" %>
+          <div class="col-md-8">
+            <%= f.text_field :workphone, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :address, class: "control-label col-md-3" %>
+          <div class="col-md-8">
+            <%= f.text_area :address, class: "form-control" %>
+          </div>
+        </div>
+
+
+        <div class="form-check">
+          <%= f.label :telegram, class: "form-check-label col-md-3" %>
+          <div class="col-md-8">
+            <%= f.check_box :telegram, class: "form-check-input" %>
+          </div>
+        </div>
+        <div class="form-check">
+          <%= f.label :viber, class: "form-check-label col-md-3" %>
+          <div class="col-md-8">
+            <%= f.check_box :viber, class: "form-check-inlput" %>
+          </div>
+        </div>
+        <div class="form-check">
+          <%= f.label :whatsapp, class: "form-check-label col-md-3" %>
+          <div class="col-md-8">
+            <%=f.check_box :whatsapp, class: "form-check-input" %>
+          </div>
+        </div>
+
+
+
+        <div class="form-group">
+          <%= f.label :history, class: "control-label col-md-3" %>
+          <div class="col-md-8">
+            <%= f.text_area :history, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="group" id="group" class="control-label col-md-3"></label>
+          <div class="col-md-5">
+            <select name="group" id="group" class="control-label col-md-3">
+              <option value="">Select group</option>
+              <option value="1">Family</option>
+              <option value="2">Friend</option>
+              <option value="3">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label for="group" class="control-label col-md-3">Group</label>
+            <div class="col-md-5">
+              <select name="group" id="group" class="form-control">
+                <option value="">Select group</option>
+                <option value="1">Relative</option>
+                <option value="2">Schoolmates</option>
+                <option value="3">MFUAmates</option>
+                <option value="4">Coworkers</option>
+                <option value="5">Karma</option>
+                <option value="6">Programmers</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <a href="#" id="add-group-btn" class="btn btn-default btn-block">Add Group</a>
+            </div>
+          </div>
+          <div class="form-group" id="add-new-group" style="display: none;">
+            <div class="col-md-offset-3 col-md-8">
+              <div class="input-group">
+                <input type="text" name="new_group" id="new_group" class="form-control">
+                <span class="input-group-btn">
+                  <a href="#" class="btn btn-default">
+                    <i class="glyphicon glyphicon-ok"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="fileinput fileinput-new" data-provides="fileinput">
+            <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
+              <img src="http://placehold.it/150x150" alt="Photo">
+            </div>
+            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+            <div class="text-center">
+              <span class="btn btn-default btn-file"><span class="fileinput-new">Choose Photo</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+              <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <button type="submit" class="btn btn-primary">Save</button>
+
+            <%= link_to "Cancel", contacts_path, class: "btn btn-default" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
