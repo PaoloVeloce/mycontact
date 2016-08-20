@@ -1,28 +1,26 @@
-== README
+Rails version 4.2.6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Contact Manager
 
-Things you may want to cover:
+One moment from reality brings me to this app. I need to make some calls to Tatarstan clients, which haven't paid for three months already,
+and my contact from that region, to whom I usually send bills and his number is temporarily unavailable. So I began to call to company, asking for somebody,
+who will tell me what's going on and understand that my contact is not working there, so they don't recieve bills and don't pay!
 
-* Ruby version
+ It is not the first and second case, overall in HoReCa we have high staff turnover rates and with growing number of clients I need to structure them more clearly.
 
-* System dependencies
+Plus to all, I have strong business contacts in industrial sphere - such as bridge crane, lifts and automatization manufacturers, who buys from me components -
+- here staff is more stable, but there are more than two hundred!
 
-* Configuration
+So, I understood that I need to test my RoR skills and build something simple and useful to manage them. So that's it.
 
-* Database creation
+It has:
+- simple form with Name/Company/Email/Photo for contacts list
+- more detailed info inside with 2 phones, messengers like telegram/viber/whatsapp, address and small history of relationships
 
-* Database initialization
+I used:
+- bootstrap for fast-and-nice look
+- will_paginate for pages
+- uploading photo with paperclip 5
+- categories for contact manager
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+You can take and use it if you need!
