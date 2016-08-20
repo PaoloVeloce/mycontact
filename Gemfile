@@ -26,6 +26,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # install faker to create fake data
 gem 'faker', '~> 1.6', '>= 1.6.6'
+# bootstrap pagination
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'paperclip', '~> 5.1'
+gem 'jasny-bootstrap-rails', '~> 3.1', '>= 3.1.3'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

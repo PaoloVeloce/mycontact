@@ -7,9 +7,9 @@ class CreateContacts < ActiveRecord::Migration
       t.string :contactphone
       t.string :workphone
       t.string :address
-      t.string :telegram
-      t.string :whatsapp
-      t.string :viber
+      t.boolean :telegram
+      t.boolean :whatsapp
+      t.boolean :viber
       t.text :history
 
       t.timestamps null: false

@@ -1,6 +1,9 @@
 class ContactsController < ApplicationController
+  # find contact before actions
+  before_action :find_contact, only: [:edit, :update, :destroy]
+
   def index
-    @contacts = Contact.all
+    @contacts = Contact.paginate(page: params[:page], per_page: 10)
   end
 
   def new
@@ -18,11 +21,11 @@ class ContactsController < ApplicationController
   end
 
   def edit
-    @contact = Contact.find(params[:id])
+
   end
 
   def update
-    @contact = Contact.find(params[:id])
+
     if @contact.update(contact_params)
       flash[:success] = "Successfully updated contact!"
       redirect_to contacts_path
@@ -32,7 +35,7 @@ class ContactsController < ApplicationController
   end
 
   def destroy
-    @contact = Contact.find(params[:id])
+
     @contact.destroy
     flash[:success] = "Successfully deleted contact"
     redirect_to contacts_path
@@ -40,7 +43,11 @@ class ContactsController < ApplicationController
 
   private
 
+  def find_contact
+    @contact = Contact.find(params[:id])
+  end
+
   def contact_params
-    params.require(:contact).permit(:name, :company, :email, :contactphone, :workphone, :address, :telegram, :whatsapp, :viber, :history)
+    params.require(:contact).permit(:name, :company, :email, :contactphone, :workphone, :address, :telegram, :whatsapp, :viber, :history, :avatar)
   end
 end
